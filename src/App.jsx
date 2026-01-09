@@ -105,7 +105,7 @@ import OneMUN from "./Pages/Clubs/OneMUN/OneMUN.jsx";
 import OneJournal from "./Pages/Clubs/OneJournal/OneJournal.jsx";
 import OneAID from "./Pages/Clubs/OneAID.jsx";
 import Mask from "./Pages/Clubs/Mask/Mask.jsx";
-import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
