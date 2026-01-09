@@ -105,10 +105,12 @@ import OneMUN from "./Pages/Clubs/OneMUN/OneMUN.jsx";
 import OneJournal from "./Pages/Clubs/OneJournal/OneJournal.jsx";
 import OneAID from "./Pages/Clubs/OneAID.jsx";
 import Mask from "./Pages/Clubs/Mask/Mask.jsx";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
     <div className="w-full h-full font-Product">
+      <Analytics />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
