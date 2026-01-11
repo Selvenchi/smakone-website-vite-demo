@@ -12,14 +12,14 @@ const Calendar = () => {
     <div>
       <Nav />
 
-      <div className="flex justify-center flex-col mx-auto w-full h-full pb-12 mt-[7rem]">
+      <div className="flex justify-center flex-col mx-auto w-full h-full pb-12 mt-[7rem] sm:mt-[8rem]">
         <p className="flex justify-center sm:text-2xl">Smukie's</p>
         <p className="flex justify-center text-5xl sm:text-6xl font-bold mt-[-1rem]">
           Calendar
         </p>
       </div>
 
-      <div>
+      <div className="flex flex-col gap-6">
         <div className="flex justify-center flex-col items-center">
           <p>2026</p>
           <div className="flex justify-center items-center gap-5 mb-5">
@@ -29,7 +29,7 @@ const Calendar = () => {
           </div>
         </div>
 
-        <img src={january} />
+        <img src={january} className="h-full w-full sm:w-[600px] mx-auto" />
       </div>
 
       <Footer />
