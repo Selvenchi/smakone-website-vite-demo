@@ -149,3 +149,7 @@
 .hover-zoom:hover {
   transform: scale(1.2);
 }
+
+.transition-smooth {
+  transition: all 0.8s cubic-bezier(0.7, 0, 0.2, 1);
+}

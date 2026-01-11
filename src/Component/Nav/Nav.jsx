@@ -34,6 +34,7 @@ import { IoIosBasketball } from "react-icons/io";
 import { BsFillBrushFill } from "react-icons/bs";
 import { IoFlaskSharp } from "react-icons/io5";
 import { GiCalendar } from "react-icons/gi";
+import MobileSlideOver from "./MobileSlideOver";
 // import { GiPublicSpeaker } from "react-icons/gi";
 
 const Nav = (props) => {
@@ -113,6 +114,7 @@ const Nav = (props) => {
   let menuArray = [pathSMAK1, pathOSIS, pathKehidupan, pathKegiatan];
   const [menu, setMenu] = useState(menuArray);
   const [isHeadlessOpen, setIsHeadlessOpen] = useState(false);
+  const [mobileNavbarisOpen, setMobileNavbarIsOpen] = useState(false);
   const setMenuValue = (props) => {
     let newArr = [...menu];
     newArr[props] = !newArr[props];
@@ -130,6 +132,10 @@ const Nav = (props) => {
   return (
     <>
       <div className="Circle"></div>
+      <MobileSlideOver
+        isOpen={mobileNavbarisOpen}
+        setMobileNavbarIsOpen={setMobileNavbarIsOpen}
+      />
       <nav className="">
         <div
           className={classNames(
@@ -158,9 +164,11 @@ const Nav = (props) => {
               <button
                 aria-label="open"
                 id="open"
-                onClick={() => openHandler()}
+                onClick={() => {
+                  setMobileNavbarIsOpen(mobileNavbarisOpen ? false : true);
+                }}
                 className={`${
-                  isHeadlessOpen ? "hidden" : ""
+                  mobileNavbarisOpen ? "hidden" : ""
                 } focus:outline-none focus:ring-2`}
               >
                 <svg
@@ -196,9 +204,11 @@ const Nav = (props) => {
               <button
                 aria-label="close"
                 id="close"
-                onClick={() => closeHandler()}
+                onClick={() => {
+                  setMobileNavbarIsOpen(mobileNavbarisOpen ? false : true);
+                }}
                 className={`${
-                  isHeadlessOpen ? "" : "hidden"
+                  mobileNavbarisOpen ? "" : "hidden"
                 } focus:outline-none focus:ring-2`}
               >
                 <svg
@@ -226,479 +236,6 @@ const Nav = (props) => {
               </button>
             </div>
           </div>
-          <HeadlessSlideOver
-            open={isHeadlessOpen}
-            setOpen={setIsHeadlessOpen}
-            title="Item Details"
-          >
-            <div
-              id="Main"
-              className={`transform ease-in-out transition duration-500 flex justify-start items-start h-full  w-full bg-white flex-col`}
-            >
-              {/* <div className="mt-6 flex flex-col justify-start items-center  pl-4 w-full border-gray-600 border-b space-y-3 pb-5 ">
-                <button className="flex jusitfy-start items-center space-x-6 w-full  focus:outline-none  focus:text-indigo-400  text-black rounded ">
-                    <svg>
-                    </svg>
-                    <p className="text-base leading-4 ">Placeholder</p>
-                </button> */}
-              <div className="flex flex-col justify-start items-center md:items-start px-6 border-b border-gray-600 w-full">
-                <button
-                  onClick={() => setMenuValue(0)}
-                  className="focus:outline-none focus:text-indigo-400  text-black flex justify-between items-center w-full py-5 space-x-14  "
-                >
-                  <p className="text-sm leading-5 uppercase">Tentang SMAK 1</p>
-                  <svg
-                    id="icon1"
-                    className={`${
-                      menu[0] ? "" : "rotate-180"
-                    } transform duration-200`}
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18 15L12 9L6 15"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div
-                  id="menu1"
-                  className={`${
-                    menu[0] ? "flex" : "hidden"
-                  } justify-start  flex-col w-full md:w-auto items-start pb-5 `}
-                >
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/tentang_smak1" ? "font-bold" : "text-gray-500"
-                    }`}
-                  >
-                    <IoEyeSharp size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/tentang_smak1">Sekilas Pandang</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/tentang_smak1/sejarah"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <AiFillFlag size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/tentang_smak1/Sejarah">
-                        Sejarah, Visi, dan Misi
-                      </Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/tentang_smak1/fasilitas"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <FaBuilding size={24} />
-                    <p className="text-base leading-4">
-                      <Link to="/tentang_smak1/Fasilitas">Fasilitas</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/tentang_smak1/logo"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <RiShieldCrossFill size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/tentang_smak1/Logo">Logo</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/tentang_smak1/lagu"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <IoMdMusicalNotes size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/tentang_smak1/Lagu">Lagu</Link>
-                    </p>
-                  </button>
-                </div>
-              </div>
-              <div className="flex flex-col justify-start items-center md:items-start px-6 border-b border-gray-600 w-full">
-                <button
-                  onClick={() => setMenuValue(1)}
-                  className="focus:outline-none focus:text-indigo-400  text-black flex justify-between items-center w-full py-5 space-x-14  "
-                >
-                  <p className="text-sm leading-5 uppercase">OSIS</p>
-                  <svg
-                    id="icon2"
-                    className={`${
-                      menu[1] ? "" : "rotate-180"
-                    } transform duration-200`}
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18 15L12 9L6 15"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div
-                  className={`${
-                    menu[1] ? "flex" : "hidden"
-                  } justify-start  flex-col w-full md:w-auto items-start pb-5 `}
-                >
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/osis" ||
-                      path === "/osis/bph" ||
-                      path === "/osis/bidang1" ||
-                      path === "/osis/bidang2" ||
-                      path === "/osis/bidang3" ||
-                      path === "/osis/bidang4" ||
-                      path === "/osis/bidang5" ||
-                      path === "/osis/bidang6" ||
-                      path === "/osis/bidang7" ||
-                      path === "/osis/bidang8" ||
-                      path === "/osis/bidang9" ||
-                      path === "/osis/bidang10"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <BsFillPeopleFill size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/OSIS">Tentang OSIS</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/osis/emagz" ? "font-bold" : "text-gray-500"
-                    }`}
-                  >
-                    <BsBookFill size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/OSIS/Emagz">E-Magazine (Archived)</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/osis/ass1st" ||
-                      path === "/osis/ass1st/kedokteran" ||
-                      path === "/osis/ass1st/farmasi" ||
-                      path === "/osis/ass1st/keguruan" ||
-                      path === "/osis/ass1st/sosiologi" ||
-                      path === "/osis/ass1st/akutansi" ||
-                      path === "/osis/ass1st/hukum" ||
-                      path === "/osis/ass1st/psikologi" ||
-                      path === "/osis/ass1st/teknik_sipil" ||
-                      path === "/osis/ass1st/pertambangan"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <FaUniversity size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/OSIS/ASS1ST">Ass1st</Link>
-                    </p>
-                  </button>
-                </div>
-              </div>
-              <div className="flex flex-col justify-start items-center md:items-start px-6 border-b border-gray-600 w-full">
-                <button
-                  onClick={() => setMenuValue(2)}
-                  className="focus:outline-none focus:text-indigo-400  text-black flex justify-between items-center w-full py-5 space-x-14  "
-                >
-                  <p className="text-sm leading-5  uppercase">
-                    Kehidupan SMUKIERS
-                  </p>
-                  <svg
-                    id="icon3"
-                    className={`${
-                      menu[2] ? "" : "rotate-180 "
-                    } transform duration-200`}
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18 15L12 9L6 15"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div
-                  className={`${
-                    menu[2] ? "flex" : "hidden"
-                  } justify-start  flex-col w-full md:w-auto items-start pb-5 `}
-                >
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kehidupan_smukiers"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <IoIosPaperPlane size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kehidupan_smukiers">Kehidupan SMUKIERS</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kehidupan_smukiers/tips"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <GiLightBulb size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kehidupan_smukiers/Tips">Tips Belajar</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kehidupan_smukiers/kegiatan"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <GiThrowingBall size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kehidupan_smukiers/Kegiatan">
-                        Kegiatan Setelah Kelas
-                      </Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kehidupan_smukiers/alumni" ||
-                      path === "/kehidupan_smukiers/alumni/billystevanus" ||
-                      path === "/kehidupan_smukiers/alumni/scottmoses" ||
-                      path === "/kehidupan_smukiers/alumni/nicolecharlene"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <IoSchool size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kehidupan_smukiers/Alumni">Alumni</Link>
-                    </p>
-                  </button>
-
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kehidupan_smukiers/calendar"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <GiCalendar size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kehidupan_smukiers/calendar">Calendar</Link>
-                    </p>
-                  </button>
-                </div>
-              </div>
-              <div className="flex flex-col justify-start items-center md:items-start px-6 w-full">
-                <button
-                  onClick={() => setMenuValue(3)}
-                  className="focus:outline-none focus:text-indigo-400  text-black flex justify-between items-center w-full py-5 space-x-14  "
-                >
-                  <p className="text-sm leading-5  uppercase">Kegiatan</p>
-                  <svg
-                    id="icon3"
-                    className={`${
-                      menu[3] ? "" : "rotate-180 "
-                    } transform duration-200`}
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18 15L12 9L6 15"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div
-                  className={`${
-                    menu[3] ? "flex" : "hidden"
-                  } justify-start  flex-col w-full md:w-auto items-start pb-5 `}
-                >
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan" ? "font-bold" : "text-gray-500"
-                    }`}
-                  >
-                    <FaRunning size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan">Kegiatan</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/soc" ? "font-bold" : "text-gray-500"
-                    }`}
-                  >
-                    <img src={SOC} alt="SOC" className="grayscale h-6 w-6" />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan/SOC">Smakonecup</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/soundscape"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <SiGooglepodcasts size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan/Soundscape">Soundscape</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/sapxsms"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <MdTheaters size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/kegiatan/sapxsms">
-                        Smukiez Art Performance
-                      </Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/clubs/kr1za" ? "font-bold" : "text-gray-500"
-                    }`}
-                  >
-                    <IoIosBasketball size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/clubs/KR1ZA">KR1ZA</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/seni" ? "font-bold" : "text-gray-500"
-                    }`}
-                  >
-                    <BsFillBrushFill size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan/Seni">Seni</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/scj" ? "font-bold" : "text-gray-500"
-                    }`}
-                  >
-                    <IoFlaskSharp size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan/SCJ">Science Club</Link>
-                    </p>
-                  </button>
-                  {/* <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/pramuka"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <img src={Pramukaks} alt="Pramuka" className=" h-6 w-6" />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan/Pramuka">Pramuka</Link>
-                    </p>
-                  </button>
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/onecast"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <img
-                      src={OneCast}
-                      alt="OneCast"
-                      className="grayscale h-6 w-6"
-                    />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan/OneCast">OneCast</Link>
-                    </p>
-                  </button> */}
-                  <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/dofe" ? "font-bold" : "text-gray-500"
-                    }`}
-                  >
-                    <img
-                      src={DoFE}
-                      alt="DoFEIA"
-                      className="grayscale h-6 w-6"
-                    />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan/DofE">DofE</Link>
-                    </p>
-                  </button>
-                  {/* <button
-                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
-                      path === "/kegiatan/muneds"
-                        ? "font-bold"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    <GiPublicSpeaker size={24} />
-                    <p className="text-base leading-4  ">
-                      <Link to="/Kegiatan/MUNEDS">MUNEDS</Link>
-                    </p>
-                  </button> */}
-                </div>
-              </div>
-              <div className="flex flex-col justify-start items-center md:items-start px-6 w-full border-t border-gray-600">
-                <button
-                  className={`text-black flex justify-between items-center w-full py-5 space-x-14`}
-                >
-                  <p className="text-base leading-4">
-                    <Link to="/clubs" className="text-sm leading-5 uppercase">
-                      CLUBS
-                    </Link>
-                  </p>
-                </button>
-              </div>
-            </div>
-          </HeadlessSlideOver>
           <div className="lg:items-center lg:w-auto w-full sm:pt-1 lg:py-5 leading-normal hidden lg:block ">
             <div className="flex flex-rows place-items-center gap-4 sm:gap-8 md:gap-3 md:justify-end lg:justify-center">
               <Dropdown
