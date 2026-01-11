@@ -33,6 +33,7 @@ import { MdTheaters } from "react-icons/md";
 import { IoIosBasketball } from "react-icons/io";
 import { BsFillBrushFill } from "react-icons/bs";
 import { IoFlaskSharp } from "react-icons/io5";
+import { GiCalendar } from "react-icons/gi";
 // import { GiPublicSpeaker } from "react-icons/gi";
 
 const Nav = (props) => {
@@ -92,7 +93,8 @@ const Nav = (props) => {
     path === "/kehidupan_smukiers/alumni" ||
     path === "/kehidupan_smukiers/alumni/billystevanus" ||
     path === "/kehidupan_smukiers/alumni/scottmoses" ||
-    path === "/kehidupan_smukiers/alumni/nicolecharlene";
+    path === "/kehidupan_smukiers/alumni/nicolecharlene" ||
+    path === "/kehidupan_smukiers/calendar";
 
   const pathKegiatan =
     path === "/kegiatan" ||
@@ -506,6 +508,19 @@ const Nav = (props) => {
                       <Link to="/Kehidupan_smukiers/Alumni">Alumni</Link>
                     </p>
                   </button>
+
+                  <button
+                    className={`flex justify-start items-center space-x-6 rounded px-3 py-2  w-full ${
+                      path === "/kehidupan_smukiers/calendar"
+                        ? "font-bold"
+                        : "text-gray-500"
+                    }`}
+                  >
+                    <GiCalendar size={24} />
+                    <p className="text-base leading-4  ">
+                      <Link to="/Kehidupan_smukiers/calendar">Calendar</Link>
+                    </p>
+                  </button>
                 </div>
               </div>
               <div className="flex flex-col justify-start items-center md:items-start px-6 w-full">
@@ -762,7 +777,8 @@ const Nav = (props) => {
                       path === "/kehidupan_smukiers/alumni" ||
                       path === "/kehidupan_smukiers/alumni/billystevanus" ||
                       path === "/kehidupan_smukiers/alumni/scottmoses" ||
-                      path === "/kehidupan_smukiers/alumni/nicolecharlene"
+                      path === "/kehidupan_smukiers/alumni/nicolecharlene" ||
+                      path === "/kehidupan_smukiers/calendar"
                         ? "link-underline-static drop-shadow-[0_15px_12px_rgba(0,0,0,0.25)]"
                         : "link-underline"
                     }`}
@@ -771,11 +787,13 @@ const Nav = (props) => {
                 dir2="/Kehidupan_smukiers/Tips"
                 dir3="/Kehidupan_smukiers/Kegiatan"
                 dir4="/Kehidupan_smukiers/Alumni"
+                dir5="/Kehidupan_smukiers/Calendar"
                 menu1="Kehidupan SMUKIERS"
                 // menu2="Clubs"
                 menu2="Tips Belajar"
                 menu3="Kegiatan Setelah Kelas"
                 menu4="Alumni"
+                menu5="Calendar"
                 Kehidupan={true}
               />
               <Dropdown

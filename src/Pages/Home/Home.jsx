@@ -68,9 +68,8 @@ const Home = () => {
           }}
         > */}
 
-          {/* we are smak 1 osis new ver */}
           <div>
-            <h1 className="text-4xl sm:text-5xl md:text-[3.25rem] lg:text-6xl xl:text-[5rem] font-black">
+            <h1 className="text-3xl sm:text-5xl md:text-[3.25rem] lg:text-6xl xl:text-[5rem] font-black mt-[-30px] sm:mt-[-10px]">
               We are SMAK 1's OSIS
             </h1>
             <h4 className="text-base xl:text-2xl lg:text-xl sm:text-xl font-bold">
@@ -78,29 +77,11 @@ const Home = () => {
             </h4>
           </div>
 
-          {/* we are smak 1 osis old ver */}
-          {/* <div className="px-5 md:px-10 lg:px-16 xl:px-20 pt-32 lg:pt-44 pb-12 md:pb-24 lg:pb-24 xl:pb-44">
-            <h1 className="text-4xl sm:text-5xl md:text-[3.25rem] lg:text-6xl xl:text-[5rem] font-black">
-              We are SMAK 1's OSIS
-            </h1>
-            <h4 className="text-base xl:text-2xl lg:text-xl sm:text-xl font-bold">
-              Sekolah terbaik dengan siswa-siswi yang berprestasi
-            </h4>
-          </div> */}
-
-          {/* <div className="px-5 md:px-10 lg:px-16 xl:px-20 pt-32 lg:pt-44 pb-12 md:pb-24 lg:pb-24 xl:pb-45">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-[3.5rem] font-black leading-tight">ALL NEW 10<sup>th</sup> GRADERS</h1>
-            <div className="mt-10">
-              <Link to="/BukuAcara" target="blank" className="hover:bg-gray-700 text-white bg-black font-bold rounded-full text-md sm:text-xl lg:text-2xl px-6 md:px-8 lg:px-10 xl:px-12 py-2 lg:py-3 text-center mr-2 mb-2">
-                CLICK HERE
-              </Link>
-            </div>
-          </div  */}
-          {/* <div className="mt-2 md:mt-3 flex flex-col gap-5">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl xl:text-[3.5rem] font-black leading-tight">
+          {/* <div className="flex flex-col gap-5 mt-10">
+            <h1 className="text-3xl md:text-4xl lg:text-4xl xl:text-[3.5rem] font-black leading-tight">
               ALL NEW 10<sup>th</sup> GRADERS
             </h1>
-            <div className="sm:mt-5 md:mt-0 lg:mt-2">
+            <div className="mt-2">
               <Link
                 to="/BukuAcara"
                 target="blank"
@@ -112,8 +93,7 @@ const Home = () => {
           </div> */}
         </div>
 
-        {/* HUT 75 SMAK 1 */}
-        <div
+        {/* <div
           style={{
             "--image-url": `url(${stn_splash})`,
             "--image-url-mobile": `url(${stn_splash_mobile})`,
@@ -135,20 +115,20 @@ const Home = () => {
               </span>
             </h5>
           </article>
-          {/* LINK TO OTHER PAGE
+
           <Link to="/Kegiatan/sapxsnm">
             <button className="bg-white mt-12 lg:mt-16 xl:mt-20 px-8 lg:px-10 xl:px-12 py-1 lg:py-1.5 xl:py-2 rounded-full font-bold text-2xl lg:text-3xl xl:text-4xl">
               Learn More
             </button>
-          </Link> */}
-          {/* LINK TO OTHER WEB */}
+          </Link>
+
           <button
             onClick={() => window.open("http://75smak1.hallayak.com", "_blank")}
             className="bg-white mt-12 lg:mt-16 xl:mt-20 px-8 lg:px-10 xl:px-12 py-1 lg:py-1.5 xl:py-2 rounded-full font-bold text-2xl lg:text-3xl xl:text-4xl"
           >
             Click Here
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* <div className=' text-black w-full h-auto px-3 pt-12 xl:pb-10'>

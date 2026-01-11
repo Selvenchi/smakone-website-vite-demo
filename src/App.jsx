@@ -62,6 +62,7 @@ import KehidupanSmukiers from "./Pages/Smukiers/KehidupanSmukiers.jsx";
 import Clubpage from "./Pages/Clubs/Clubpage.jsx";
 import TipsBelajar from "./Pages/Smukiers/TipsBelajar.jsx";
 import KegiatanSetelahKelas from "./Pages/Smukiers/KegiatanSetelahKelas.jsx";
+import Calendar from "./Pages/Smukiers/Calendar.jsx";
 
 import BPH from "./Pages/Osis/BPH/BPH.jsx";
 import OSIS_1 from "./Pages/Osis/Osis_1/Osis_1.jsx";
@@ -167,6 +168,7 @@ function App() {
           path="/Kehidupan_smukiers/kegiatan"
           element={<KegiatanSetelahKelas />}
         />
+        <Route path="/Kehidupan_smukiers/calendar" element={<Calendar />} />
         <Route path="/Kehidupan_smukiers/Alumni" element={<AlumniPage />} />
         <Route
           path="/Kehidupan_smukiers/Alumni/BillyStevanus"

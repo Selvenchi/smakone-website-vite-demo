@@ -1,9 +1,9 @@
-import { Fragment } from 'react';
-import { Dialog, Transition } from '@headlessui/react';
+import { Fragment } from "react";
+import { Dialog, Transition } from "@headlessui/react";
 
 export default function HeadlessSlideOver({ open, setOpen, title, children }) {
   return (
-    <Transition.Root show={open} as={Fragment} className='lg:hidden'>
+    <Transition.Root show={open} as={Fragment} className="lg:hidden">
       <Dialog
         as="div"
         static
