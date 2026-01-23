@@ -29,7 +29,10 @@ const Calendar = () => {
           </div>
         </div>
 
-        <img src={january} className="h-full w-full sm:w-[600px] mx-auto" />
+        <img
+          src={january}
+          className="h-full w-full md:px-[5rem] md:w-[60rem] mx-auto"
+        />
       </div>
 
       <Footer />

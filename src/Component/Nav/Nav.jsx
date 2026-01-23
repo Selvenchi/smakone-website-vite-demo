@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import HeadlessSlideOver from "./HeadlessSlideOver";
+
 import { Link } from "react-router-dom";
 import { useScrollPosition } from "../../Hooks";
 import { useLocation } from "react-router-dom";
@@ -88,21 +88,12 @@ const Nav = (props) => {
 
   let menuArray = [pathSMAK1, pathOSIS, pathKehidupan, pathKegiatan];
   const [menu, setMenu] = useState(menuArray);
-  const [isHeadlessOpen, setIsHeadlessOpen] = useState(false);
   const [mobileNavbarisOpen, setMobileNavbarIsOpen] = useState(false);
   const setMenuValue = (props) => {
     let newArr = [...menu];
     newArr[props] = !newArr[props];
     setMenu(newArr);
   };
-
-  function openHandler() {
-    setIsHeadlessOpen(true);
-  }
-
-  function closeHandler() {
-    setIsHeadlessOpen(false);
-  }
 
   return (
     <>
