@@ -11,36 +11,38 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 
-import LogoPenabur from "/Image/Penabur_logo.webp";
-import LogoOsis from "/Image/OSIS_Logo.webp";
-import Logo_SMAK1 from "/Image/Logo_SMAK1.webp";
-import Logo_CodeOne from "/Image/logo_codeone.webp";
-
 const Footer = () => {
   return (
     <div>
       <footer>
         <div className="mx-auto">
           <div className="py-20 px-5 sm:px-10 md:px-12">
-            <div className="bg-cover bg-footer-image rounded-xl py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-              <div className="flex flex-col items-center">
-                <p className="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-normal text-white text-center mb-10 mx-6">
-                  Cari Tahu Informasi Terkini Mengenai SMAK 1 <br />
-                  di Instagram Kami
-                </p>
-                <div>
-                  <a
-                    href="https://www.instagram.com/smukiee/"
-                    target="blank"
-                    className="text-xl md:text-2xl text-white font-bold rounded-full bg-light-blue py-3 px-6 md:px-8 md:py-4 lg:py-4 lg:px-9 xl:px-10 flex justify-center hover:bg-blue-700"
-                  >
-                    <div className="flex gap-1.5">
-                      <div className="mt-0.5">
-                        <FaInstagram className="h-full w-full" />
+            <div className="bg-cover bg-footer-image rounded-xl  ">
+              <div className="relative -z-10">
+                <img
+                  className="rounded-xl object-cover w-full h-[16rem] md:h-[20rem] xl:h-[24rem] "
+                  src="/Image/Background_Footer.webp"
+                  alt=""
+                />
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <p className="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-normal text-white text-center mb-10 mx-6">
+                    Cari Tahu Informasi Terkini Mengenai SMAK 1 <br />
+                    di Instagram Kami
+                  </p>
+                  <div>
+                    <a
+                      href="https://www.instagram.com/smukiee/"
+                      target="blank"
+                      className="text-xl md:text-2xl text-white font-bold rounded-full bg-light-blue py-3 px-6 md:px-8 md:py-4 lg:py-4 lg:px-9 xl:px-10 flex justify-center hover:bg-blue-700"
+                    >
+                      <div className="flex gap-1.5">
+                        <div className="mt-0.5">
+                          <FaInstagram className="h-full w-full" />
+                        </div>
+                        <span>smukiee</span>
                       </div>
-                      <span>smukiee</span>
-                    </div>
-                  </a>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -51,7 +53,7 @@ const Footer = () => {
               <img
                 className="object-scale-down mx-auto h-8 w-1/2 sm:w-9/12 mb-8 sm:mb-12"
                 alt="smakone"
-                src={Logo_SMAK1}
+                src={"/Image/Logo_SMAK1.webp"}
               />
             </div>
 
@@ -169,12 +171,12 @@ const Footer = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-3 ">
                   <div className="flex justify-self-center lg:justify-self-start pt-6 pb-3">
                     <img
-                      src={LogoPenabur}
+                      src={"/Image/Penabur_logo.webp"}
                       className="object-scale-down h-20 mr-2"
                       alt="BPK PENABUR Logo"
                     />
                     <img
-                      src={LogoOsis}
+                      src={"/Image/OSIS_Logo.webp"}
                       className="object-scale-down h-20"
                       alt="OSIS SMAK 1 Logo"
                     />
@@ -189,7 +191,7 @@ const Footer = () => {
                   </div>
                   <div className="flex justify-self-center lg:justify-self-end py-5 my-auto">
                     <img
-                      src={Logo_CodeOne}
+                      src={"/Image/logo_codeone.webp"}
                       className="object-scale-down h-12 mr-2"
                       alt="Logo CodeOne"
                     />

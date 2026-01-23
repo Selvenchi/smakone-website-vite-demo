@@ -1,4 +1,3 @@
-import { FaBuilding } from "react-icons/fa";
 import { navigations } from "./navbar";
 import { Link, useLocation } from "react-router-dom";
 import MobileDropdown from "./MobileDropdown";

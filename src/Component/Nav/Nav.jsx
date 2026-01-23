@@ -9,31 +9,6 @@ import Dropdown from "./Dropdown";
 
 //Import Image
 import Logo_SMAK1 from "/Image/Logo_SMAK1.webp";
-import SOC from "/Image/Nav/SMAKONECUP.webp";
-// import Pramukaks from "/Image/Nav/Pramuka.webp";
-import DoFE from "/Image/Nav/DofE.webp";
-// import OneCast from "/Image/Nav/Onecast.webp";
-
-//Import icons
-import { IoEyeSharp } from "react-icons/io5";
-import { AiFillFlag } from "react-icons/ai";
-import { FaBuilding } from "react-icons/fa";
-import { RiShieldCrossFill } from "react-icons/ri";
-import { IoMdMusicalNotes } from "react-icons/io";
-import { BsFillPeopleFill } from "react-icons/bs";
-import { BsBookFill } from "react-icons/bs";
-import { FaUniversity } from "react-icons/fa";
-import { IoIosPaperPlane } from "react-icons/io";
-import { GiLightBulb } from "react-icons/gi";
-import { GiThrowingBall } from "react-icons/gi";
-import { IoSchool } from "react-icons/io5";
-import { FaRunning } from "react-icons/fa";
-import { SiGooglepodcasts } from "react-icons/si";
-import { MdTheaters } from "react-icons/md";
-import { IoIosBasketball } from "react-icons/io";
-import { BsFillBrushFill } from "react-icons/bs";
-import { IoFlaskSharp } from "react-icons/io5";
-import { GiCalendar } from "react-icons/gi";
 import MobileSlideOver from "./MobileSlideOver";
 // import { GiPublicSpeaker } from "react-icons/gi";
 
@@ -144,7 +119,7 @@ const Nav = (props) => {
               scrollPosition > 0
               ? "bg-slate-100 drop-shadow-[0_15px_12px_rgba(0,0,0,0.25)]"
               : "lg:bg-inherit lg:drop-shadow-none bg-slate-100 drop-shadow-[0_15px_12px_rgba(0,0,0,0.25)]",
-            "lg:flex lg:flex-rows lg:flex-wrap items-center pt-4 sm:pt-5 sm:pb-4 md:py-5 lg:px-18 md:px-10 px-4 lg:py-0 w-full fixed top-0 left-0 justify-between z-50 transition-all duration-200"
+            "lg:flex lg:flex-rows lg:flex-wrap items-center pt-4 sm:pt-5 sm:pb-4 md:py-5 lg:px-18 md:px-10 px-4 lg:py-0 w-full fixed top-0 left-0 justify-between z-50 transition-all duration-200",
           )}
         >
           <div className="lg:grid-cols-none grid grid-cols-3 pb-3 sm:pb-0">

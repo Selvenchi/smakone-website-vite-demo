@@ -7,11 +7,14 @@ export default function MobileDropdown({ item }) {
 
   return (
     <div>
+      {item.title !== "TENTANG SMAK 1" && (
+        <div className="h-[1.2px] bg-black w-full my-5"></div>
+      )}
       <div
         onClick={() => {
           setIsOpen(!isOpen);
         }}
-        className="cursor-pointer select-none flex items-center justify-between"
+        className="cursor-pointer select-none flex items-center justify-between py-3"
       >
         {item.title}
         <svg
@@ -34,7 +37,8 @@ export default function MobileDropdown({ item }) {
           />
         </svg>
       </div>
-      <div className={`${isOpen ? "block" : "hidden"}`}>
+
+      <div className={`${isOpen ? "block" : "hidden"} `}>
         {item.nav.map(function (nav) {
           return (
             <button
