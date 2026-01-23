@@ -71,7 +71,7 @@ const Clubpage = () => {
           quote="Siswa-siswi SMAK 1 memiliki banyak kesempatan untuk mengembangkan diri melalui berbagai club yang seru dan inspiratif. Dari seni, olahraga, hingga teknologi, setiap klub dirancang untuk memperluas keterampilan, kreatifitas, juga pengalaman siswa dan siswi. Selain itu dengan mengikuti clubs yang ada, siswa dan siswi dapat memperkuat portofolio agar memiliki peluang yang lebih besar untuk diterima di kampus favorit. Beberapa club yang dapat diikuti yaitu : F1RST, SERENITY, Mask, Smukiez Choir, Smukiez Youth Chamber (SYC), Cressendo, CodeOne, ShutterOne, dan banyak lagi. Baca deskripsi clubs dibawah ini untuk mengetahui lebih lanjut!"
         />
         <ContentHeader title="Daftar Clubs" />
-        <div className="pt-12 px-6 md:px-12 lg:px-16 xl:px-28 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 content-evenly">
+        <div className="pt-12 px-6 md:px-12 lg:px-16 xl:px-28 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 content-evenly relative -z-10">
           <LinkBox
             href="..\..\Clubs\f1rst"
             title="F1RST"
