@@ -16,8 +16,8 @@ export default function MobileSlideOver({ isOpen, setMobileNavbarIsOpen }) {
       ></nav>
       {/* Content */}
       <div
-        className={`lg:hidden fixed inset-0 h-full ml-auto transition-smooth flex flex-col py-6 bg-white shadow-xl overflow-y-scroll max-w-[30rem] pt-24 p-12 ${
-          isOpen ? "translate-x-0" : "translate-x-[30rem]"
+        className={`lg:hidden fixed inset-0 h-full ml-auto transition-smooth flex flex-col py-6 bg-white shadow-xl overflow-y-scroll max-w-[22.5rem] pt-24 p-12 ${
+          isOpen ? "translate-x-0" : "translate-x-[22.5rem]"
         }`}
       >
         {navigations.map(function (item) {
