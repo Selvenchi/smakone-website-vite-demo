@@ -16,16 +16,16 @@ const Footer = () => {
     <div>
       <footer>
         <div className="mx-auto">
-          <div className="py-20 px-5 sm:px-10 md:px-12">
-            <div className="bg-cover bg-footer-image rounded-xl  ">
+          <div className="px-5 py-20 sm:px-10 md:px-12">
+            <div className="bg-cover bg-footer-image rounded-xl ">
               <div className="relative -z-10">
                 <img
-                  className="rounded-xl object-cover w-full h-[16rem] md:h-[20rem] xl:h-[24rem] "
+                  className="rounded-xl object-cover w-full h-[16rem] md:h-[20rem] xl:h-[24rem]  "
                   src="/Image/Background_Footer.webp"
                   alt=""
                 />
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <p className="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-normal text-white text-center mb-10 mx-6">
+                <div className="absolute inset-0 flex flex-col items-center justify-center ">
+                  <p className="mx-6 mb-10 text-xl font-bold leading-normal text-center text-white sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
                     Cari Tahu Informasi Terkini Mengenai SMAK 1 <br />
                     di Instagram Kami
                   </p>
@@ -33,11 +33,11 @@ const Footer = () => {
                     <a
                       href="https://www.instagram.com/smukiee/"
                       target="blank"
-                      className="text-xl md:text-2xl text-white font-bold rounded-full bg-light-blue py-3 px-6 md:px-8 md:py-4 lg:py-4 lg:px-9 xl:px-10 flex justify-center hover:bg-blue-700"
+                      className="flex justify-center px-6 py-3 text-xl font-bold text-white rounded-full md:text-2xl bg-light-blue md:px-8 md:py-4 lg:py-4 lg:px-9 xl:px-10 hover:bg-blue-700"
                     >
                       <div className="flex gap-1.5">
                         <div className="mt-0.5">
-                          <FaInstagram className="h-full w-full" />
+                          <FaInstagram className="w-full h-full" />
                         </div>
                         <span>smukiee</span>
                       </div>
@@ -51,18 +51,18 @@ const Footer = () => {
           <div>
             <div>
               <img
-                className="object-scale-down mx-auto h-8 w-1/2 sm:w-9/12 mb-8 sm:mb-12"
+                className="object-scale-down w-1/2 h-8 mx-auto mb-8 sm:w-9/12 sm:mb-12"
                 alt="smakone"
                 src={"/Image/Logo_SMAK1.webp"}
               />
             </div>
 
             <div>
-              <div className=" flex justify-center gap-3 md:justify-around px-8 md:mx-10 md:pb-12">
+              <div className="flex justify-center gap-3 px-8 md:justify-around md:mx-10 md:pb-12">
                 <div className="flex flex-col gap-y-2 xl:gap-y-4 text-gray-500 md:font-bold text-[0.9rem] sm:text-lg xl:text-xl">
                   <Link
                     to="/OSIS"
-                    className="hover:text-gray-500 font-bold text-black"
+                    className="font-bold text-black hover:text-gray-500"
                   >
                     Tentang OSIS
                   </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
                 <div className="flex flex-col text-[0.9rem] sm:text-lg xl:text-xl gap-y-2 xl:gap-y-4 text-gray-500 md:font-bold">
                   <Link
                     to="/Kehidupan_smukiers"
-                    className="hover:text-gray-500 font-bold text-black"
+                    className="font-bold text-black hover:text-gray-500"
                   >
                     Kehidupan SMUKIERS
                   </Link>
@@ -139,7 +139,7 @@ const Footer = () => {
 
               <div className="text-center md:hidden">
                 <p className="pt-4 pb-2 text-lg font-semibold">Contact Us</p>
-                <div className="flex flex-row justify-center gap-x-1 pb-12">
+                <div className="flex flex-row justify-center pb-12 gap-x-1">
                   <a
                     href="mailto:smak1.osis@bpkpenaburjakarta.or.id"
                     className="mt-[0.1em]"
@@ -166,10 +166,10 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="bg-gray-200 px-10">
+            <div className="px-10 bg-gray-200">
               <div className="container mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-3 ">
-                  <div className="flex justify-self-center lg:justify-self-start pt-6 pb-3">
+                  <div className="flex pt-6 pb-3 justify-self-center lg:justify-self-start">
                     <img
                       src={"/Image/Penabur_logo.webp"}
                       className="object-scale-down h-20 mr-2"
@@ -181,15 +181,15 @@ const Footer = () => {
                       alt="OSIS SMAK 1 Logo"
                     />
                   </div>
-                  <div className="flex justify-self-center object-center my-auto">
-                    <p className="text-center align-center font-bold text-gray-500 xl:text-lg">
+                  <div className="flex object-center my-auto justify-self-center">
+                    <p className="font-bold text-center text-gray-500 align-center xl:text-lg">
                       Jalan Tanjung Duren Raya Nomor 4<br />
                       Jakarta Barat, DKI Jakarta 11470
                       <br />
                       Tel: (+62)21 5666962
                     </p>
                   </div>
-                  <div className="flex justify-self-center lg:justify-self-end py-5 my-auto">
+                  <div className="flex py-5 my-auto justify-self-center lg:justify-self-end">
                     <img
                       src={"/Image/logo_codeone.webp"}
                       className="object-scale-down h-12 mr-2"
@@ -199,7 +199,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="bg-gray-100 text-center py-1 text-xs">
+            <div className="py-1 text-xs text-center bg-gray-100">
               <p>
                 Copyright © 2024 SMAK ONE Student Council All Rights Reserved
               </p>

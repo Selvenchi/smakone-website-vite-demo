@@ -8,7 +8,7 @@ export default function MobileDropdown({ item }) {
   return (
     <div>
       {item.title !== "TENTANG SMAK 1" && (
-        <div className="h-[1.2px] bg-black w-full my-5"></div>
+        <div className="h-[1.2px] bg-black my-5"></div>
       )}
       <div
         onClick={() => {
